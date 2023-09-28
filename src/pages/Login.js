@@ -7,6 +7,7 @@ const Login = () => {
     title.innerText = "SPOTV NOW(스포티비 나우)";
   }, []);
 
+  // 로그인 input state
   const [login, setLogin] = useState({
     email: "",
     password: "",
@@ -28,8 +29,11 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <div className="left">
-        <img src={process.env.PUBLIC_URL + "assets/Login_right_img.png"}></img>
+      <div className="backgound">
+        <img
+          className="backgound_img"
+          src={process.env.PUBLIC_URL + "assets/Login_backgound.png"}
+        ></img>
       </div>
       <div className="right">
         <div className="logo_img">
@@ -51,7 +55,7 @@ const Login = () => {
             value={login.password}
             onChange={handleLoginInputChange}
             placeholder="비밀번호"
-            autocomplete="off"
+            autoComplete="off"
           ></input>
           <button className="Login_btn" type="submit">
             로그인
