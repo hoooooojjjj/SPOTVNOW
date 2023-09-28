@@ -1,5 +1,5 @@
-import "./pages/pages.css";
 import "./components/components.css";
+import "./pages/sign/sign.css";
 
 import AppRouter from "./AppRouter";
 
