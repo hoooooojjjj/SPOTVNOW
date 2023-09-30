@@ -22,7 +22,8 @@ const SignUpCheck = () => {
   const nav = useNavigate();
 
   // 이메일 확인
-  const emailCheck = () => {
+  const emailCheck = (e) => {
+    e.preventDefault();
     fetchSignInMethodsForEmail(auth, email)
       .then((signInMethods) => {
         if (signInMethods.includes("password")) {
@@ -55,7 +56,7 @@ const SignUpCheck = () => {
   return (
     <div className="SignUpCheck">
       <header>
-        <div className="SignUpCheck_header">
+        <div className="header">
           <img
             onClick={() => {
               nav("/login");
@@ -66,25 +67,27 @@ const SignUpCheck = () => {
         </div>
       </header>
       <main>
-        <div className="SignUpCheck_text_warap">
-          <p className="SignUpCheck_text1">회원가입 여부 확인</p>
-          <p className="SignUpCheck_text2">
+        <div className="text_wrap">
+          <p className="text1">회원가입 여부 확인</p>
+          <p className="text2">
             기존 계정에 등록하신 이메일을 정확하게 입력하셔야
             <br /> 가입하신 계정을 확인할 수 있습니다
           </p>
         </div>
         <div className="SignUpCheck_input">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            placeholder="이메일 입력"
-          />
-          <br />
-          <button onClick={emailCheck}>확인하기</button>
-          <div className="SignUpCheck_checkEmail">{checkEmail}</div>
+          <form onSubmit={emailCheck}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="이메일 입력"
+            />
+            <br />
+            <button>확인하기</button>
+            <div className="SignUpCheck_checkEmail">{checkEmail}</div>
+          </form>
         </div>
         <footer>
           <p>
