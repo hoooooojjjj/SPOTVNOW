@@ -52,7 +52,9 @@ const Login = () => {
   // 구글 로그인 구현
   const googleLogin = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
+    signInWithPopup(auth, provider).then(() => {
+      nav("/");
+    });
   };
 
   return (
