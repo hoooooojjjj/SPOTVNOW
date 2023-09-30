@@ -51,8 +51,8 @@ const Login = () => {
 
   // 구글 로그인 구현
   const googleLogin = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider).then(() => {
+    const provider1 = new GoogleAuthProvider();
+    signInWithPopup(auth, provider1).then(() => {
       nav("/");
     });
   };

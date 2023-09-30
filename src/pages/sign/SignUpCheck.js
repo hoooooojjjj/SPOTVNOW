@@ -24,33 +24,36 @@ const SignUpCheck = () => {
   // 이메일 확인
   const emailCheck = (e) => {
     e.preventDefault();
-    fetchSignInMethodsForEmail(auth, email)
-      .then((signInMethods) => {
-        if (signInMethods.includes("password")) {
-          // 이메일 주소와 연결된 사용자가 있을 때만 비밀번호 재설정 이메일을 보냅니다.
-          if (email.length > 1) {
-            sendPasswordResetEmail(auth, email)
-              .then(() => {
-                // 이메일 전송 성공
-                setcheckEmail(
-                  "해당 이메일로 메일을 전송했습니다. 비밀번호를 재설정해주세요"
-                );
-              })
-              .catch(() => {
-                // 이메일 전송 실패
-                setcheckEmail("비밀번호 재설정 이메일을 보낼 수 없습니다.");
-              });
-          } else {
-          }
-        } else {
-          // 이메일 주소와 연결된 사용자가 없을 경우 메시지 표시
-          setcheckEmail("해당 이메일로 가입된 계정이 없습니다");
-        }
-      })
-      .catch((error) => {
-        // 오류 처리
-        console.error(error);
-      });
+    // fetchSignInMethodsForEmail(auth, email)
+    //   .then((signInMethods) => {
+    //     console.log(email);
+    //     console.log(signInMethods);
+    //     if (signInMethods.includes("password")) {
+    //       // 이메일 주소와 연결된 사용자가 있을 때만 비밀번호 재설정 이메일을 보냅니다.
+    if (email.length > 1) {
+      sendPasswordResetEmail(auth, email)
+        .then(() => {
+          // 이메일 전송 성공
+          setcheckEmail(
+            "해당 이메일로 메일을 전송했습니다. 비밀번호를 재설정해주세요"
+          );
+        })
+        .catch(() => {
+          // 이메일 전송 실패
+          setcheckEmail("비밀번호 재설정 이메일을 보낼 수 없습니다.");
+        });
+    }
+    //       } else {
+    //       }
+    //     } else {
+    //       // 이메일 주소와 연결된 사용자가 없을 경우 메시지 표시
+    //       setcheckEmail("해당 이메일로 가입된 계정이 없습니다");
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     // 오류 처리
+    //     console.error(error);
+    //   });
   };
 
   return (
