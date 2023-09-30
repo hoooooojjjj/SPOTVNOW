@@ -50,6 +50,9 @@
     font-weight: bold;
     font-size: 15px;
 }
+.Login .Login_btn:hover{
+background-color: rgb(149, 145, 145);
+}
 
 .loginerr{
     color: white;
@@ -78,4 +81,82 @@
 }
 .Login .findEmailPassword a{
     color: white;
+}
+
+/* SignUpCheck */
+.SignUpCheck{
+    color: white;   
+    background-color: rgb(17, 17, 17);
+}
+.SignUpCheck .SignUpCheck_header{
+    width: 100%;
+    height: 12vh;
+    background-color: black;
+    cursor: pointer;
+}
+.SignUpCheck .SignUpCheck_header img{
+    width: 180px;
+    height: 53px;
+    margin: 20px 0 0 110px;
+}
+.SignUpCheck main{
+    height: 77vh;
+}
+.SignUpCheck .SignUpCheck_text_warap{
+    text-align: center;
+    margin-top: 80px;
+}   
+.SignUpCheck .SignUpCheck_text1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.SignUpCheck .SignUpCheck_text2{
+    font-weight: bold;
+    color: rgb(218, 210, 210);
+}
+.SignUpCheck .SignUpCheck_input{
+ text-align: center;   
+ margin-top: 60px;
+
+}
+.SignUpCheck .SignUpCheck_input input{
+    background-color: rgb(17, 17, 17);
+    border: none;
+    border-bottom: 2px solid rgb(103, 101, 101);
+    width: 380px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}
+.SignUpCheck .SignUpCheck_input button{
+    margin-top: 80px;
+    border: none;
+    border-radius: 30px;
+    width: 392px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.SignUpCheck .SignUpCheck_input button:hover{
+    background-color: rgb(149, 145, 145);
+}
+.SignUpCheck .SignUpCheck_checkEmail{
+    margin-top: 30px;
+    font-weight: bold;
+}
+.SignUpCheck footer{
+    text-align: center;
+    margin-top: 30px;
+}
+.SignUpCheck footer p{
+    color: rgb(103, 101, 101);
+    font-weight: bold;
+}
+.SignUpCheck footer a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
 }

@@ -61,11 +61,15 @@ const Login = () => {
         <img
           className="backgound_img"
           src={process.env.PUBLIC_URL + "assets/Login_backgound.png"}
+          alt="배경화면"
         ></img>
       </div>
       <div className="right">
         <div className="logo_img">
-          <img src={process.env.PUBLIC_URL + "assets/logo.png"}></img>
+          <img
+            src={process.env.PUBLIC_URL + "assets/logo.png"}
+            alt="로고"
+          ></img>
         </div>
         <form onSubmit={hanbleLoginSubmit} className="Login_form">
           <input
@@ -95,6 +99,7 @@ const Login = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/google_login.png"}
             onClick={googleLogin}
+            alt="구글 로고"
           ></img>
         </div>
         <div className="findEmailPassword">
