@@ -62,7 +62,7 @@ const SignUpCheck = () => {
         <div className="header">
           <img
             onClick={() => {
-              nav("/login");
+              nav("/");
             }}
             src={process.env.PUBLIC_URL + "assets/logo.png"}
             alt="로고"
