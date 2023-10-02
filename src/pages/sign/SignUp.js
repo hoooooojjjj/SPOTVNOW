@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../myfirebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   // title 변경
@@ -11,6 +11,7 @@ const SignUp = () => {
   }, []);
 
   const [signup, setsignup] = useState({
+    displayName: "",
     email: "",
     password: "",
     passwordCheck: "",
@@ -33,8 +34,20 @@ const SignUp = () => {
     if (signup.password === signup.passwordCheck) {
       createUserWithEmailAndPassword(auth, signup.email, signup.password)
         .then((userCredential) => {
-          alert("회원가입이 완료되었습니다");
-          nav("/", { replace: true });
+          // 사용자 생성 후 displayName과 photoURL 업데이트
+          return Promise.all([
+            updateProfile(userCredential.user, {
+              displayName: signup.displayName,
+              photoURL: process.env.PUBLIC_URL + "assets/logo.png", // 포토 URL을 입력하세요.
+            }),
+          ])
+            .then(() => {
+              alert("회원가입이 완료되었습니다");
+              nav("/", { replace: true });
+            })
+            .catch((error) => {
+              console.log("프로필 업데이트 실패:", error.message);
+            });
         })
         .catch((error) => {
           const errorMessage = error.message;
@@ -73,6 +86,13 @@ const SignUp = () => {
           </p>
         </div>
         <form className="SignUp_form" onSubmit={handleSignUpSubmit}>
+          <input
+            type="text"
+            name="displayName"
+            value={signup.displayName}
+            onChange={handlesignUpInputChange}
+            placeholder="이름"
+          />
           <input
             type="email"
             name="email"
