@@ -33,14 +33,10 @@ const SignUp = () => {
     if (signup.password === signup.passwordCheck) {
       createUserWithEmailAndPassword(auth, signup.email, signup.password)
         .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          // ...
           alert("회원가입이 완료되었습니다");
           nav("/", { replace: true });
         })
         .catch((error) => {
-          const errorCode = error.code;
           const errorMessage = error.message;
           // ..
           console.log(errorMessage);

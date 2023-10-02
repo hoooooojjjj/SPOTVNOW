@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/sign/Login";
 import SignUpCheck from "./pages/sign/SignUpCheck";
 import SignUp from "./pages/sign/SignUp";
 import Home from "./pages/Home/Home";
+import FindPassword from "./pages/sign/FindPassword";
 import { userIsLoginContext } from "./App";
 
 const AppRouter = () => {
@@ -17,7 +18,7 @@ const AppRouter = () => {
           ) : (
             <Route path="/" element={<Login />}></Route>
           )}
-
+          <Route path="/findpassword" element={<FindPassword />}></Route>
           <Route path="/signupcheck" element={<SignUpCheck />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
         </Routes>

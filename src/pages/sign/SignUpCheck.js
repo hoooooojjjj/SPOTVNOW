@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../../myfirebase";
 import {
   sendPasswordResetEmail,
-  fetchSignInMethodsForEmail,
+  //   fetchSignInMethodsForEmail,
 } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 const SignUpCheck = () => {

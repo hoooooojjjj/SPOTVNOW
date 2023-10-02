@@ -7,7 +7,6 @@ import AppRouter from "./AppRouter";
 import { auth } from "./myfirebase";
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export const userIsLoginContext = React.createContext();
 export const userObjContext = React.createContext();

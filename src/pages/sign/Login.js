@@ -105,7 +105,9 @@ const Login = () => {
           ></img>
         </div>
         <div className="findEmailPassword">
-          <Link style={{ textDecoration: "none" }}>비밀번호 찾기</Link>
+          <Link to="/findpassword" style={{ textDecoration: "none" }}>
+            비밀번호 찾기
+          </Link>
           <p>
             아직 회원이 아니신가요? <Link to={"/signupcheck"}>회원가입</Link>
           </p>
