@@ -62,8 +62,8 @@ const SignUpCheck = () => {
             <button>발송</button>
           </form>
         </div>
-        <footer></footer>
       </main>
+      <footer></footer>
     </div>
   );
 };

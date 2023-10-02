@@ -38,7 +38,7 @@ const SignUp = () => {
           return Promise.all([
             updateProfile(userCredential.user, {
               displayName: signup.displayName,
-              photoURL: process.env.PUBLIC_URL + "assets/logo.png", // 포토 URL을 입력하세요.
+              photoURL: process.env.PUBLIC_URL + "assets/logo.png",
             }),
           ])
             .then(() => {

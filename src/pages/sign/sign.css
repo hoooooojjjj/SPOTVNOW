@@ -99,7 +99,7 @@ header img{
     height: 53px;
     margin: 20px 0 0 110px;
 }
-.SignUpCheck main, .SignUp main{
+.SignUpCheck main{
     height: 77vh;
 }
 .text_wrap{
@@ -161,6 +161,9 @@ header img{
     border-bottom: 1px solid white;
 }
 /* SignUp */
+.SignUp main{
+    height: 86vh;
+}
 .SignUp .text_wrap img{
     width: 100px;
     height: 50px;

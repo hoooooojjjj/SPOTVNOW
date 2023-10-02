@@ -67,22 +67,19 @@ const Home = () => {
               <li>
                 <div className="dropdown">
                   <button className="dropdown-button" onClick={toggleMenu}>
-                    {userObj.photoURL && (
-                      <img src={userObj.photoURL} alt="회원 프로필 사진"></img>
-                    )}
+                    <img src={userObj.photoURL} alt="회원 프로필 사진"></img>
                     {userObj.displayName} <span>⌵</span>
                   </button>
                   {isOpen && (
                     <>
                       <ul className="dropdown-menu">
-                        {userObj.photoURL && (
-                          <div>
-                            <img
-                              src={userObj.photoURL}
-                              alt="회원 프로필 사진"
-                            ></img>
-                          </div>
-                        )}
+                        <div>
+                          <img
+                            src={userObj.photoURL}
+                            alt="회원 프로필 사진"
+                          ></img>
+                        </div>
+
                         <li>
                           <Link>마이 페이지</Link>
                         </li>
