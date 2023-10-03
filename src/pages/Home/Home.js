@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import Navgation from "../../components/Navgation";
 import LiveNow from "./LiveNow";
+import VideoSlide from "./VideoSlide";
+
+import { today } from "../../util/VideoSlideImgUrl";
 
 const Home = () => {
   // title 변경
@@ -15,8 +18,12 @@ const Home = () => {
         <Navgation />
       </header>
       <main>
-        <div className="LiveNow_wrap">
+        <div className="home_element_wrap">
           <LiveNow />
+          <VideoSlide
+            title={"[항저우 NOW] 오늘의 아시안게임"}
+            VideoSlideImgUrl={today}
+          />
         </div>
       </main>
       <footer></footer>

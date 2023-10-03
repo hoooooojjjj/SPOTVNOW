@@ -7,15 +7,18 @@ const LiveNow = () => {
         <img
           className="live_now"
           src={process.env.PUBLIC_URL + "/assets/live_now.png"}
+          alt="live now"
         />
         <img
           className="live_now_img1"
           src={process.env.PUBLIC_URL + "/assets/live_now_img1.png"}
+          alt="대한민국 vs 바레인"
         />
         <div className="live_now_img1_text">
           <img
             className="live"
             src={process.env.PUBLIC_URL + "/assets/live.png"}
+            alt="live"
           />
           <p>
             <span>[농구] 대한민국 vs 바레인</span>
@@ -29,12 +32,14 @@ const LiveNow = () => {
           <img
             className="live_now_img2"
             src={process.env.PUBLIC_URL + "/assets/live_now_img2.png"}
+            alt="대한민국 vs 대만"
           />
           <div style={{ display: "block" }}>
             <img
               style={{ marginTop: 10 }}
               className="live"
               src={process.env.PUBLIC_URL + "/assets/live.png"}
+              alt="live"
             />
             <p className="LiveNow_right_ele_text">
               [야구] 대한민국 vs 대만 <br />
@@ -46,12 +51,14 @@ const LiveNow = () => {
           <img
             className="live_now_img3"
             src={process.env.PUBLIC_URL + "/assets/live_now_img3.png"}
+            alt="메달 결정전"
           />
           <div style={{ display: "block" }}>
             <img
               className="live"
               style={{ marginTop: 10 }}
               src={process.env.PUBLIC_URL + "/assets/live.png"}
+              alt="live"
             />
 
             <p className="LiveNow_right_ele_text">

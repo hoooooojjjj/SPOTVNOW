@@ -1,7 +1,6 @@
 /* Home */
-.Home .LiveNow_wrap{
+.Home .home_element_wrap{
     width: 1200px;
-    height: 610px;
     margin: 0 auto;
 }
 
@@ -63,4 +62,53 @@ margin-top: 5px;
     height: 18px;
     margin-top: 15px;
     margin-right: 20px;
+}
+
+/* VideoSlide */
+.VideoSlide{
+    margin-top: 40px;
+    height: 300px;
+}
+.VideoSlide .title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.VideoSlide .slide{
+    display: flex;
+}
+
+.VideoSlide .slide img{
+    margin-right: 10px;
+    width: 290px;
+    height: 161px;
+    margin-bottom: 0;
+}
+.VideoSlide .slide .text{
+    width: 290px;
+    height: 70px;
+    background-color: rgb(33, 31, 31);
+}
+.VideoSlide .slide .text p{
+    margin-top: 0;
+    margin-left: 10px;
+}
+.VideoSlide .slide .text .text_1{
+    display: inline-block;
+    line-height: 12px;
+    color: #2f8f71;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.VideoSlide .slide .text .text_2{
+    width: 95%;
+    height: 25px;
+    line-height: 14px;
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+.VideoSlide .slide .text .text_3{
+    width: 95%;
+    font-size: 11px;
+    color: #888888;
+    margin-top: 0;
 }
