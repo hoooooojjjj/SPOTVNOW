@@ -4,7 +4,7 @@ import {
   sendPasswordResetEmail,
   //   fetchSignInMethodsForEmail,
 } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const SignUpCheck = () => {
   // title 변경
   useEffect(() => {

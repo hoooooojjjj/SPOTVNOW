@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Navigation from "../../components/Navgation";
+import Navgation from "../../components/Navgation";
+import LiveNow from "./LiveNow";
 
 const Home = () => {
   // title 변경
@@ -11,9 +12,13 @@ const Home = () => {
   return (
     <div className="Home">
       <header>
-        <Navigation />
+        <Navgation />
       </header>
-      <main></main>
+      <main>
+        <div className="LiveNow_wrap">
+          <LiveNow />
+        </div>
+      </main>
       <footer></footer>
     </div>
   );

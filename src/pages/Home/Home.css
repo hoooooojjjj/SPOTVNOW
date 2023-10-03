@@ -1,83 +1,66 @@
 /* Home */
-.Home{
-    background-color: rgb(17, 17, 17);
-    color: white;
+.Home .LiveNow_wrap{
+    width: 1200px;
+    height: 565px;
+    margin: 0 auto;
 }
-.Home header{
-    width: 100%;
-    height: 10vh;
-}
-.Home ul .nav_left, .nav_right{
+
+/* LiveNow */
+.LiveNow {
     display: flex;
-    list-style: none;
 }
-.Home ul .nav_left{
-    float: left;
+.LiveNow .LiveNow_img_wrap{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
-.Home ul .nav_right{
-    float: right;
-    margin-right: 50px;
+.LiveNow .live_now{
+width: 157px;
+height: 40px;
+margin-bottom: 10px;
 }
-.Home li{
-    margin-left: 30px;
-    font-size: 17px;
-    margin-top: 15px;
-    font-weight: bold;
-
+.LiveNow .live_now_img1{
+    width: 822px;
+    height: 462px;
 }
-.Home li a{
-    text-decoration: none;
-    color: white;
+.LiveNow .LiveNow_right{
+    width: 380px;
+    height: 462px;
+    background-color: rgb(33, 31, 31);
+    margin-top: 80px;
+    margin-left: 10px;
 }
-.Home ul img {
-    width: 180px;
-    height: 53px;
-    margin: 0;
+.LiveNow .LiveNow_right_ele{
+    display: flex;
 }
-.Home .dropdown button{
-    border: none;
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    position: relative;
-    top : -10px;
+.LiveNow .LiveNow_right_ele_text {
+font-size: 14px;
+margin-top: 5px;
 }
-.Home .dropdown .dropdown-button img{
-    width: 25px;
-    height: 25px;
-    border-radius: 12px;
-    position: relative;
-    bottom: -7px;
-    left: -5px;
-
-}
-.Home .dropdown button span{
-    position: relative;
-    top : -2px
-}
-.Home .dropdown {
-    position: relative;
+.LiveNow .LiveNow_right_ele_text span{
     display: inline-block;
-  }
-.Home .dropdown .dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%; /* 드롭다운 메뉴를 버튼 아래로 위치 */
-    left: -35px;
-    padding: 20px 5px 20px 5px;
-    margin: 0;
-    background-color: rgb(50, 49, 49);
-    width: 150px;
+    font-size: 10px;
+    color: gray;
+    margin-top: 10px;
 }
-.Home .dropdown .dropdown-menu img{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin-left: 50px;
+.LiveNow .live_now_img2, .live_now_img3{
+    width: 183px;
+    height: 103px;
+    margin: 10px 10px 0px 10px;
 }
-.Home .dropdown .dropdown-menu li{
-    margin-left: 40px;
-
+.LiveNow .live_now_img1_text{
+    display: flex;
 }
-
+.LiveNow .live_now_img1_text p{
+    margin-top: 10px;
+}
+.LiveNow .live_now_img1_text span{
+    font-size: 22px;
+    font-weight: bold;
+}
+.LiveNow .live{
+    width: 38px;
+    height: 18px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
