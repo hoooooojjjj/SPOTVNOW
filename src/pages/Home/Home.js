@@ -3,8 +3,16 @@ import Navgation from "../../components/Navgation";
 import LiveNow from "./LiveNow";
 import VideoSlide from "./VideoSlide";
 
-import { today, gold, today_VOD, prim, cham } from "../../util/VideoSlideInfo";
+import {
+  today,
+  gold,
+  today_VOD,
+  prim,
+  cham,
+  TopVODs,
+} from "../../util/VideoSlideInfo";
 import VideoSlideLeage from "./VideoSlideLeage";
+import TopVOD from "./TopVOD";
 
 const Home = () => {
   // title 변경
@@ -23,23 +31,24 @@ const Home = () => {
           <LiveNow />
           <VideoSlide
             title={"[항저우 NOW] 오늘의 아시안게임"}
-            VideoSlideImgUrl={today}
+            VideoSlideInfo={today}
           />
           <VideoSlide
             title={"[항저우 NOW] 금빛으로 물든 순간들✨"}
-            VideoSlideImgUrl={gold}
+            VideoSlideInfo={gold}
           />
-          <VideoSlide title={"오늘의 추천 VOD"} VideoSlideImgUrl={today_VOD} />
+          <VideoSlide title={"오늘의 추천 VOD"} VideoSlideInfo={today_VOD} />
           <VideoSlideLeage
             title={"프리미어리그"}
-            VideoSlideImgUrl={prim}
+            VideoSlideInfo={prim}
             logo={"prim"}
           />
           <VideoSlideLeage
             title={"챔피언스리그"}
-            VideoSlideImgUrl={cham}
+            VideoSlideInfo={cham}
             logo={"cham"}
           />
+          <TopVOD title={"인기영상"} VideoSlideInfo={TopVODs} />
         </div>
       </main>
       <footer></footer>

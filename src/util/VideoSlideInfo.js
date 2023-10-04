@@ -161,3 +161,36 @@ export const cham = [
     text3: "챔피스언스리그 | 조별리그 1차전 | 2023.09.21",
   },
 ];
+
+export const TopVODs = [
+  {
+    url: "TopVOD_img1.png",
+    text1: "하이라이트",
+    text2: "[PL] 7R 토트넘 vs 리버풀 하이라이트",
+    text3: "프리미어리그 | 2023.10.01",
+  },
+  {
+    url: "TopVOD_img2.png",
+    text1: "하이라이트",
+    text2: "[PL] 7R 울버햄튼 vs 맨시티 하이라이트",
+    text3: "프리미어리그 | 2023.09.30",
+  },
+  {
+    url: "TopVOD_img3.png",
+    text1: "하이라이트",
+    text2: "[UCL] 맨유 vs 갈라타사라이 하이라이트",
+    text3: "챔피스언스리그 | 2023.10.04",
+  },
+  {
+    url: "TopVOD_img4.png",
+    text1: "하이라이트",
+    text2: "[아시안게임] LoL 준결승 1세트 | 대한민국 vs 중국 하이라이트",
+    text3: "리그오브레전드 | 2023.09.28",
+  },
+  {
+    url: "TopVOD_img5.png",
+    text1: "하이라이트",
+    text2: "[PL] 7R 풀럼 vs 첼시 하이라이트",
+    text3: "프리미어리그 | 2023.10.03",
+  },
+];
