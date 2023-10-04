@@ -5,7 +5,7 @@
 }
 .Home header{
     width: 100%;
-    height: 10vh;
+    height: 8vh;
 }
 .Home ul .nav_left, .nav_right{
     display: flex;
@@ -80,4 +80,37 @@
 .Home .dropdown .dropdown-menu li{
     margin-left: 40px;
 
+}
+
+/* Footer */
+.Footer{
+    background-color: #0c0c0c;
+    width: 100%;
+    height: 25vh;
+    border-top: 1px solid rgb(57, 55, 55);
+    color: #353535;
+    text-align: center;
+}
+.Footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    
+}
+.Footer ul li{
+    font-size: 14px;
+    cursor: pointer;
+}
+.Footer ul .white{
+    color: white;
+}
+.Footer ul li:hover{
+    color: #acaaaa;
+}
+.Footer .text{
+    font-size: 11px;
+}
+.Footer img{
+    width: 140px;
+    height: 40px;
 }

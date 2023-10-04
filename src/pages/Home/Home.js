@@ -13,6 +13,7 @@ import {
 } from "../../util/VideoSlideInfo";
 import VideoSlideLeage from "./VideoSlideLeage";
 import TopVOD from "./TopVOD";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   // title 변경
@@ -51,7 +52,9 @@ const Home = () => {
           <TopVOD title={"인기영상"} VideoSlideInfo={TopVODs} />
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
