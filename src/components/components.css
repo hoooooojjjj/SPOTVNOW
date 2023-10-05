@@ -9,6 +9,7 @@
 }
 .Home ul .nav_left, .nav_right{
     display: flex;
+    flex-direction: row;
     list-style: none;
 }
 .Home ul .nav_left{
@@ -113,4 +114,9 @@
 .Footer img{
     width: 140px;
     height: 40px;
+}
+
+/* Loading */
+.Loading{
+    color: white;
 }

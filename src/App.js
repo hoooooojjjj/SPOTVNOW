@@ -14,23 +14,27 @@ export const userObjContext = React.createContext();
 function App() {
   // 사용자가 로그인 되어있는지 확인하는 상태
   const [isLogin, setIsLogin] = useState(false);
-  const [userObj, setUserObj] = useState();
+  const [userObj, setUserObj] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUserObj(user);
-        setIsLogin(true);
+        setIsLoading((args) => false);
+        setIsLogin((args) => true);
+        setUserObj((args) => user);
       } else {
-        setIsLogin(false);
+        setIsLoading((args) => false);
+        setIsLogin((args) => false);
       }
     });
-  }, []);
+  }, [isLogin, userObj]);
+  console.log(isLogin);
   return (
     <div className="App">
       <userIsLoginContext.Provider value={isLogin}>
         <userObjContext.Provider value={userObj}>
-          <AppRouter />
+          <AppRouter isLoading={isLoading} />
         </userObjContext.Provider>
       </userIsLoginContext.Provider>
     </div>
