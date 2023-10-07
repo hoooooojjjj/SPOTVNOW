@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const LiveNow = () => {
+  const nav = useNavigate();
   return (
     <div className="LiveNow">
-      <div className="LiveNow_img_wrap">
+      <div
+        className="LiveNow_img_wrap"
+        onClick={() => {
+          nav("/live/대한민국 vs 바레인");
+        }}
+      >
         <img
           className="live_now"
           src={process.env.PUBLIC_URL + "/assets/live_now.png"}

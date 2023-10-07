@@ -1,6 +1,7 @@
 import "./components/components.css";
 import "./pages/sign/sign.css";
 import "./pages/Home/Home.css";
+import "./pages/Live/Live.css";
 
 import AppRouter from "./AppRouter";
 
@@ -20,16 +21,15 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setIsLoading((args) => false);
-        setIsLogin((args) => true);
-        setUserObj((args) => user);
+        setIsLoading((prevState) => false);
+        setIsLogin((prevState) => true);
+        setUserObj((prevState) => user);
       } else {
-        setIsLoading((args) => false);
-        setIsLogin((args) => false);
+        setIsLoading((prevState) => false);
+        setIsLogin((prevState) => false);
       }
     });
   }, [isLogin, userObj]);
-  console.log(isLogin);
   return (
     <div className="App">
       <userIsLoginContext.Provider value={isLogin}>

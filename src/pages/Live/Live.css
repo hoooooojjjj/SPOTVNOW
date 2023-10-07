@@ -1,0 +1,81 @@
+/* Live */
+.Live{
+    color: white;
+    width: 1360px;
+    height: 670px;
+    margin: 0 auto;
+    display: flex;
+}
+.Live .video .text1{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.Live .video .text2{
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(130, 129, 129);
+}
+.Live .youtube_video{
+    width: 1034px;
+    height: 580px;
+    margin-top: 40px;
+}
+.Live .live_right{
+    width: 320px;
+    height: 670px;
+    background-color: rgb(23, 23, 23);
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.Live .live_right_top{
+    display: flex;
+}
+.Live .live_right_top .live_now, .live_chat {
+    width: 160px;
+    height: 60px;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+    line-height: 55px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Live .live_right_top .live_now{
+    background-color: rgb(35, 35, 35);
+}
+.Live .live_now_title{
+    width: 320px;
+    height: 40px;
+    background-color: rgb(23, 23, 23);
+    border-top: 1px solid rgb(49, 48, 48);
+    line-height: 40px;
+    font-weight: bold;
+}
+.Live .live_now_text{
+    width: 320px;
+    height: 70px;
+    background-color: rgb(35, 35, 35);
+    line-height: 70px;
+}
+.Live .live_now_title p,.live_now_text p{
+    margin: 0;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.Live .live_chat_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 610px;
+    font-weight: bold;
+}
+.Live .live_chat_wrap button{
+    width: 158px;
+    height: 32px;
+    border: 1px solid #2affcc;
+    background-color: #191919;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #efefef;
+}
