@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/sign/Login";
 import SignUpCheck from "./pages/sign/SignUpCheck";
 import SignUp from "./pages/sign/SignUp";
@@ -26,7 +26,7 @@ const AppRouter = ({ isLoading }) => {
           <Route path="/findpassword" element={<FindPassword />} />
           <Route path="/signupcheck" element={<SignUpCheck />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/live/:id" element={<Live />} />
+          <Route path="/live" element={<Live />} />
         </Routes>
       </BrowserRouter>
     </div>

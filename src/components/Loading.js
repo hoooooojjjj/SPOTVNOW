@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 const Loading = () => {
   // title 변경

@@ -1,12 +1,18 @@
 import React, { useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Live = () => {
-  const { id } = useParams();
+  // 쿼리 스트링으로 URL DB 활용
+  const [liveOdj, setliveOdj] = useSearchParams();
+  const title1 = liveOdj.get("title1");
+  const title2 = liveOdj.get("title2");
+  const url = liveOdj.get("url");
 
   // live 채팅, live now toggle state
   const [isLiveNow, setisLiveNow] = useState(true);
 
+  // navigate
+  const nav = useNavigate();
   // 요소 가져오기
   const LiveNow = useRef();
   const LiveChat = useRef();
@@ -26,16 +32,14 @@ const Live = () => {
       <div className="video">
         <iframe
           className="youtube_video"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/1DiJyPYtyuo?si=8cGeaqh0pAj2uXVX"
+          src={url}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
           allowFullScreen
         ></iframe>
-        <p className="text1">[농구] 대한민국 vs 바레인</p>
-        <p className="text2">농구 | 남자 농구 8강 진출 결정전 | 21:00 ~</p>
+        <p className="text1">{title1}</p>
+        <p className="text2">{title2}</p>
       </div>
       <div className="live_right">
         <div className="live_right_top">
@@ -49,15 +53,42 @@ const Live = () => {
         {isLiveNow ? (
           <div className="live_now_wrap">
             <div className="live_now_title">
+              <p>농구</p>
+            </div>
+            <div
+              className="live_now_text"
+              onClick={() => {
+                nav(
+                  "/live?title1=[농구] 대한민국 vs 바레인&title2=농구 | 남자 농구 8강 진출 결정전 | 21:00 ~&url=https://www.youtube.com/embed/1DiJyPYtyuo?si=v9_XsQ3YNgeOMg5C"
+                );
+              }}
+            >
+              <p>[농구] 대한민국 vs 바레인</p>
+            </div>
+            <div className="live_now_title">
               <p>야구</p>
             </div>
-            <div className="live_now_text">
+            <div
+              className="live_now_text"
+              onClick={() => {
+                nav(
+                  "/live?title1=[야구] 대한민국 vs 대만&title2=야구 | 남자 야구 조별리그 | 19:30 ~&url=https://www.youtube.com/embed/lDnnAfqD-nA?si=iufhRs2tvE0wvqaC"
+                );
+              }}
+            >
               <p>[야구] 대한민국 vs 대만</p>
             </div>
             <div className="live_now_title">
               <p>육상</p>
             </div>
-            <div className="live_now_text">
+            <div
+              className="live_now_text"
+              onClick={() => {
+                nav(
+                  "/live?title1=[육상] 메달 결정전 - 여자 멀리뛰기, 장애물 달리기&title2=육상 | 메달 결정전 | 20:00 ~&url=https://www.youtube.com/embed/I3EeibEEHNo?si=bq6QfVBOzsL7tDoj"
+                );
+              }}
+            >
               <p>[육상] 메달 결정전 - 여자 멀리뛰기, 장애물 달리기</p>
             </div>
           </div>

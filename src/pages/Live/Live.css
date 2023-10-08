@@ -55,6 +55,7 @@
     height: 70px;
     background-color: rgb(35, 35, 35);
     line-height: 70px;
+    cursor: pointer;
 }
 .Live .live_now_title p,.live_now_text p{
     margin: 0;

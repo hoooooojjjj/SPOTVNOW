@@ -1,14 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const LiveNow = () => {
-  const nav = useNavigate();
   return (
     <div className="LiveNow">
       <div
         className="LiveNow_img_wrap"
         onClick={() => {
-          nav("/live/대한민국 vs 바레인");
+          const newWindow = window.open(
+            "/live?title1=[농구] 대한민국 vs 바레인&title2=농구 | 남자 농구 8강 진출 결정전 | 21:00 ~&url=https://www.youtube.com/embed/1DiJyPYtyuo?si=v9_XsQ3YNgeOMg5C"
+          );
+          if (newWindow) {
+            // 새 창이 열린 경우에만 title 변경
+            newWindow.onload = function () {
+              newWindow.document.title = "SPOTV NOW(스포티비 나우)";
+            };
+          }
         }}
       >
         <img
@@ -35,7 +41,20 @@ const LiveNow = () => {
         </div>
       </div>
       <div className="LiveNow_right">
-        <div className="LiveNow_right_ele">
+        <div
+          className="LiveNow_right_ele"
+          onClick={() => {
+            const newWindow1 = window.open(
+              "/live?title1=[야구] 대한민국 vs 대만&title2=야구 | 남자 야구 조별리그 | 19:30 ~&url=https://www.youtube.com/embed/lDnnAfqD-nA?si=iufhRs2tvE0wvqaC"
+            );
+            if (newWindow1) {
+              // 새 창이 열린 경우에만 title 변경
+              newWindow1.onload = function () {
+                newWindow1.document.title = "SPOTV NOW(스포티비 나우)";
+              };
+            }
+          }}
+        >
           <img
             className="live_now_img2"
             src={process.env.PUBLIC_URL + "/assets/live_now_img2.png"}
@@ -54,7 +73,20 @@ const LiveNow = () => {
             </p>
           </div>
         </div>
-        <div className="LiveNow_right_ele">
+        <div
+          className="LiveNow_right_ele"
+          onClick={() => {
+            const newWindow2 = window.open(
+              "/live?title1=[육상] 메달 결정전 - 여자 멀리뛰기, 장애물 달리기&title2=육상 | 메달 결정전 | 20:00 ~&url=https://www.youtube.com/embed/I3EeibEEHNo?si=bq6QfVBOzsL7tDoj"
+            );
+            if (newWindow2) {
+              // 새 창이 열린 경우에만 title 변경
+              newWindow2.onload = function () {
+                newWindow2.document.title = "SPOTV NOW(스포티비 나우)";
+              };
+            }
+          }}
+        >
           <img
             className="live_now_img3"
             src={process.env.PUBLIC_URL + "/assets/live_now_img3.png"}
