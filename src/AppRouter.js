@@ -8,6 +8,7 @@ import FindPassword from "./pages/sign/FindPassword";
 import { userIsLoginContext } from "./App";
 import Loading from "./components/Loading";
 import Live from "./pages/Live/Live";
+import Vod from "./pages/VOD/Vod";
 
 const AppRouter = ({ isLoading }) => {
   const isLogin = useContext(userIsLoginContext);
@@ -27,6 +28,7 @@ const AppRouter = ({ isLoading }) => {
           <Route path="/signupcheck" element={<SignUpCheck />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/live" element={<Live />} />
+          <Route path="/vod" element={<Vod />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,12 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const TopVOD = ({ title, VideoSlideInfo }) => {
+  const nav = useNavigate();
   return (
     <div className="TopVOD">
       <p className="title">{title}</p>
       <div className="slide_wrap">
         <div className="firSlide">
-          <div className="slide_wrap1">
+          <div
+            className="slide_wrap1"
+            onClick={() => {
+              nav(
+                `/vod?title1=[PL] 7R 토트넘 vs 리버풀 하이라이트&title2=프리미어리그 | 2023.10.01
+                &text=토트넘 vs 리버풀&youtubeUrl=https://www.youtube.com/embed/hvWhYCl7Gs8?si=FLWyf4KZgQ0yKPX9`
+              );
+            }}
+          >
             <img
               src={process.env.PUBLIC_URL + `/assets/TopVOD_img1.png`}
               alt="비디오"
@@ -21,7 +31,15 @@ const TopVOD = ({ title, VideoSlideInfo }) => {
         <div className="slide">
           {VideoSlideInfo.map((videoInfo, index) =>
             index !== 0 ? (
-              <div key={index} className="slide_wrap2">
+              <div
+                key={index}
+                className="slide_wrap2"
+                onClick={() => {
+                  nav(
+                    `/vod?title1=${videoInfo.text2}&title2=${videoInfo.text3}&text=${videoInfo.text4}&youtubeUrl=${videoInfo.youtubeUrl}`
+                  );
+                }}
+              >
                 <img
                   src={process.env.PUBLIC_URL + `/assets/${videoInfo.url}`}
                   alt="비디오"

@@ -2,6 +2,7 @@ import "./components/components.css";
 import "./pages/sign/sign.css";
 import "./pages/Home/Home.css";
 import "./pages/Live/Live.css";
+import "./pages/VOD/Vod.css";
 
 import AppRouter from "./AppRouter";
 

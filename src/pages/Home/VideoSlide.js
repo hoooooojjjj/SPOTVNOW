@@ -1,12 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const VideoSlide = ({ title, VideoSlideInfo }) => {
+  const nav = useNavigate();
   return (
     <div className="VideoSlide">
       <p className="title">{title}</p>
       <div className="slide">
         {VideoSlideInfo.map((videoInfo, index) => (
-          <div key={index} className="slide_wrap">
+          <div
+            key={index}
+            className="slide_wrap"
+            onClick={() => {
+              nav(
+                `/vod?title1=${videoInfo.text2}&title2=${videoInfo.text3}&text=${videoInfo.text4}&youtubeUrl=${videoInfo.youtubeUrl}`
+              );
+            }}
+          >
             <img
               src={process.env.PUBLIC_URL + `/assets/${videoInfo.url}`}
               alt="비디오"

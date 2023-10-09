@@ -18,7 +18,7 @@ const Navgation = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="Navgation">
       <div className="Home">
         <nav>
           <ul>
@@ -32,7 +32,9 @@ const Navgation = () => {
               ></img>
 
               <li>
-                <Link style={{ color: "aquamarine" }}>홈</Link>
+                <Link style={{ color: "aquamarine" }} to={"/"}>
+                  홈
+                </Link>
               </li>
               <li>
                 <Link>일정</Link>

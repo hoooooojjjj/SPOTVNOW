@@ -3,9 +3,10 @@
     background-color: rgb(17, 17, 17);
     color: white;
 }
-.Home header{
+.Navgation .Home{
     width: 100%;
     height: 8vh;
+    background-color: black;
 }
 .Home ul .nav_left, .nav_right{
     display: flex;
@@ -19,7 +20,7 @@
     float: right;
     margin-right: 50px;
 }
-.Home li{
+.Home .nav_left li, .nav_right li{
     margin-left: 30px;
     font-size: 17px;
     margin-top: 15px;
@@ -101,6 +102,10 @@
 .Footer ul li{
     font-size: 14px;
     cursor: pointer;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
 }
 .Footer ul .white{
     color: white;
